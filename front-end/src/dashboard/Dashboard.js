@@ -31,22 +31,34 @@ function Dashboard({ date }) {
   const dateString = dateObj.toDateString();
 
   // load the reservations by date
-  useEffect(() => {
-    const abortController = new AbortController();
+  useEffect(loadDashboard, [date]);
 
-    async function loadDashboard() {
-      try {
-        setDashboardError([]);
-        const reservationDate = await listReservations({ date }, abortController.signal);
-        setReservations(reservationDate);
-      } catch (error) {
-        setReservations([]);
-        setDashboardError([error.message]);
-      }
-    }
-    loadDashboard();
+  function loadDashboard() {
+    const abortController = new AbortController();
+    setReservationsError(null);
+    listReservations({ date }, abortController.signal)
+      .then(setReservations)
+      .catch(setReservationsError);
+
+    //listTables().then(setTables)
     return () => abortController.abort();
-  }, [date]);
+  }
+  // useEffect(() => {
+  //   const abortController = new AbortController();
+
+  //   async function loadDashboard() {
+  //     try {
+  //       setDashboardError([]);
+  //       const reservationDate = await listReservations({ date }, abortController.signal);
+  //       setReservations(reservationDate);
+  //     } catch (error) {
+  //       setReservations([]);
+  //       setDashboardError([error.message]);
+  //     }
+  //   }
+  //   loadDashboard();
+  //   return () => abortController.abort();
+  // }, [date]);
 
   // load all tables
   useEffect(() => {
