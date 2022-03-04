@@ -1,6 +1,6 @@
 # Thinkful Capstone: Periodic Tables
 
-> Live app is available here:  https://periodic-tables-frontend--as.herokuapp.com/dashboard
+> Live app is available here:  
 
 A full-stack app built using:
 - HTML
