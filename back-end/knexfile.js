@@ -3,7 +3,8 @@
  *
  * You will not need to make changes to this file.
  */
-
+let name = "thinkful";
+console.log(name);
 require('dotenv').config();
 const path = require("path");
 
