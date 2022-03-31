@@ -43,15 +43,11 @@ A full-stack app built using:
 The menu provides options to:
 1. Search for a reservation
 
-![menuSearch]
 
 2. Create a new reservation 
 
-![menuNewReservation]
 
 3. Create a new table
-
-![menuNewTable]
 
 ---
 
@@ -60,11 +56,9 @@ The menu provides options to:
 1. Enter the phone number for the reservation.
 1. Click `find`.
 
-![search]
 
 This will display any matching results.
 
-![searched]
 
 ---
 
@@ -73,7 +67,6 @@ This will display any matching results.
 1. Fill out the form with the reservation information.
 1. Click `submit`.
 
-![newReservation]
 
 ---
 
@@ -82,7 +75,6 @@ This will display any matching results.
 1. Fill out the form with the table information.
 1. Click `submit`.
 
-![newTable]
 
 ---
 
@@ -92,11 +84,9 @@ This will display any matching results.
 1. Select a table from the drop-down menu.
 1. Click `submit` to seat the reservation at the selected table.
 
-![seat]
 
 Once a reservation is seated, the reservation status will change from `booked` to `seated`.
 
-![seated]
 
 ---
 
@@ -105,7 +95,6 @@ Once a reservation is seated, the reservation status will change from `booked` t
 1. Click `finish` on the table that has finished.
 1. Click `OK` on the confirmation window that pops-up.
 
-![finishing]
 
 Note: finished reservations no longer display in the dashboard.
 
@@ -117,7 +106,6 @@ Note: finished reservations no longer display in the dashboard.
 1. Edit any of the reservation information as needed.
 1. Click `submit` to save the updated reservation information.
 
-![editing]
 
 ---
 
@@ -126,7 +114,6 @@ Note: finished reservations no longer display in the dashboard.
 1. Click `cancel` on the reservation you'd like to cancel.
 1. Click `OK` on the confirmation window that pops-up.
 
-![cancelling]
 
 Note: cancelled reservations no longer display in the dashboard.
 
