@@ -34,7 +34,6 @@ A full-stack app built using:
 - Navigation buttons: `Previous Day`, `Today`, & `Next Day` are available for changing the date displayed by the dashboard.
 - All tables (free or occupied) are also diplayed here.
 
-![dashboard](
 
 ---
 
