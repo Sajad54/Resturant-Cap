@@ -34,7 +34,7 @@ A full-stack app built using:
 - Navigation buttons: `Previous Day`, `Today`, & `Next Day` are available for changing the date displayed by the dashboard.
 - All tables (free or occupied) are also diplayed here.
 
-![dashboard](./screenshots/dashboard.png)
+![dashboard](
 
 ---
 
@@ -43,15 +43,15 @@ A full-stack app built using:
 The menu provides options to:
 1. Search for a reservation
 
-![menuSearch](./screenshots/menuSearch.png)
+![menuSearch]
 
 2. Create a new reservation 
 
-![menuNewReservation](./screenshots/menuNewReservation.png)
+![menuNewReservation]
 
 3. Create a new table
 
-![menuNewTable](./screenshots/menuNewTable.png)
+![menuNewTable]
 
 ---
 
@@ -60,11 +60,11 @@ The menu provides options to:
 1. Enter the phone number for the reservation.
 1. Click `find`.
 
-![search](./screenshots/search.png)
+![search]
 
 This will display any matching results.
 
-![searched](./screenshots/searched.png)
+![searched]
 
 ---
 
@@ -73,7 +73,7 @@ This will display any matching results.
 1. Fill out the form with the reservation information.
 1. Click `submit`.
 
-![newReservation](./screenshots/newReservation.png)
+![newReservation]
 
 ---
 
@@ -82,7 +82,7 @@ This will display any matching results.
 1. Fill out the form with the table information.
 1. Click `submit`.
 
-![newTable](./screenshots/newTable.png)
+![newTable]
 
 ---
 
@@ -92,11 +92,11 @@ This will display any matching results.
 1. Select a table from the drop-down menu.
 1. Click `submit` to seat the reservation at the selected table.
 
-![seat](./screenshots/seat.png)
+![seat]
 
 Once a reservation is seated, the reservation status will change from `booked` to `seated`.
 
-![seated](./screenshots/seated.png)
+![seated]
 
 ---
 
@@ -105,7 +105,7 @@ Once a reservation is seated, the reservation status will change from `booked` t
 1. Click `finish` on the table that has finished.
 1. Click `OK` on the confirmation window that pops-up.
 
-![finishing](./screenshots/finishing.png)
+![finishing]
 
 Note: finished reservations no longer display in the dashboard.
 
@@ -117,7 +117,7 @@ Note: finished reservations no longer display in the dashboard.
 1. Edit any of the reservation information as needed.
 1. Click `submit` to save the updated reservation information.
 
-![editing](./screenshots/editing.png)
+![editing]
 
 ---
 
@@ -126,21 +126,10 @@ Note: finished reservations no longer display in the dashboard.
 1. Click `cancel` on the reservation you'd like to cancel.
 1. Click `OK` on the confirmation window that pops-up.
 
-![cancelling](./screenshots/cancelling.png)
+![cancelling]
 
 Note: cancelled reservations no longer display in the dashboard.
 
 ---
 
-## Installation
-
-1. Fork and clone this repository.
-1. Run `cp ./back-end/.env.sample ./back-end/.env`.
-1. Update the `./back-end/.env` file with the connection URL's to your database instance.
-1. Run `cp ./front-end/.env.sample ./front-end/.env`.
-1. Include your backend connection within `./front-end/.env` (defaults to `http://localhost:5000`).
-1. Run `npm install` to install project dependencies.
-1. Run `npm run start` to start the server.
-
-If you have trouble getting the server to run, reach out for assistance.
 
