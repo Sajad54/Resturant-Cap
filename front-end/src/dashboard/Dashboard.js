@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//test
 import { listReservations, listTables } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
 import Reservations from "../reservations/Reservations";
@@ -31,34 +30,22 @@ function Dashboard({ date }) {
   const dateString = dateObj.toDateString();
 
   // load the reservations by date
-  useEffect(loadDashboard, [date]);
-
-  function loadDashboard() {
+  useEffect(() => {
     const abortController = new AbortController();
-    setReservationsError(null);
-    listReservations({ date }, abortController.signal)
-      .then(setReservations)
-      .catch(setDashboardError([error.message]));
 
-    //listTables().then(setTables)
+    async function loadDashboard() {
+      try {
+        setDashboardError([]);
+        const reservationDate = await listReservations({ date }, abortController.signal);
+        setReservations(reservationDate);
+      } catch (error) {
+        setReservations([]);
+        setDashboardError([error.message]);
+      }
+    }
+    loadDashboard();
     return () => abortController.abort();
-  }
-  // useEffect(() => {
-  //   const abortController = new AbortController();
-
-  //   async function loadDashboard() {
-  //     try {
-  //       setDashboardError([]);
-  //       const reservationDate = await listReservations({ date }, abortController.signal);
-  //       setReservations(reservationDate);
-  //     } catch (error) {
-  //       setReservations([]);
-  //       setDashboardError([error.message]);
-  //     }
-  //   }
-  //   loadDashboard();
-  //   return () => abortController.abort();
-  // }, [date]);
+  }, [date]);
 
   // load all tables
   useEffect(() => {
